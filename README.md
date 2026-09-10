@@ -126,12 +126,21 @@ If you use this code in your research, please cite:
 ```bibtex
 @software{zebrafish_behavioral_phenotyping,
   title  = {Zebrafish Behavioral Phenotyping: Automated Locomotion Tracking and Survival Prediction},
-  author = {AGW23rd},
+  author = {AGW23rd and Liao, Bo-Kai},
   year   = {2026},
   url    = {https://github.com/AGW23rd/zebrafish-behavioral-phenotyping}
 }
 ```
 
+## Acknowledgments
+
+This project was developed under the supervision of **Prof. Bo-Kai Liao**.
+
 ## License
 
 This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
+
+## Contributors
+
+- [AGW23rd](https://github.com/AGW23rd)
+- [Prof. Bo-Kai Liao](https://github.com/LBK888) (Supervisor)
