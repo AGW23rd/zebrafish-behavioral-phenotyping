@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Model weights (too large for GitHub)
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+
+# DLL files
+*.dll
+
+# Data files (contain experimental data, not code)
+*.xlsx
+*.xls
+*.csv
+
+# Output figures (can be regenerated)
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# Run outputs
+runs/
+
+# Misc
+*.pptx
+*.log
