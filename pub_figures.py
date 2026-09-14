@@ -1,8 +1,45 @@
+"""
+pub_figures.py — Generate publication-ready figures (600 DPI) for the
+zebrafish behavioral phenotyping manuscript.
+
+Requires:
+    larvae_data_Fully_Graded.xlsx   Scored locomotion data produced by
+                                     score_larvae1.py.  This file is not
+                                     included in the repository because it
+                                     contains raw experimental data.
+                                     Contact the authors to request a copy,
+                                     or generate it by running the pipeline:
+                                       yolo_tracker_v2.py → score_larvae1.py
+
+Usage:
+    python pub_figures.py                            # looks for data in cwd
+    python pub_figures.py path/to/data.xlsx          # custom data path
+"""
+
+import os
+import sys
 import pandas as pd
 import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# ==========================================
+# 0. RESOLVE DATA FILE PATH
+# ==========================================
+DATA_FILE = sys.argv[1] if len(sys.argv) > 1 else "larvae_data_Fully_Graded.xlsx"
+
+if not os.path.isfile(DATA_FILE):
+    print(f"❌ Data file not found: {DATA_FILE}")
+    print()
+    print("   This script requires 'larvae_data_Fully_Graded.xlsx', which is")
+    print("   not included in the repository (raw experimental data).")
+    print()
+    print("   Options:")
+    print("     1. Run the pipeline first:  yolo_tracker_v2.py → score_larvae1.py")
+    print("     2. Specify a custom path:   python pub_figures.py path/to/data.xlsx")
+    print("     3. Contact the authors to request the dataset.")
+    sys.exit(1)
 
 # ==========================================
 # 1. PUBLICATION-GRADE FORMATTING CONFIG
@@ -31,7 +68,7 @@ palette = {'High (8-10)': '#4daf4a', 'Mid (4-7)': '#ff7f00'} # Colorblind-friend
 # ==========================================
 # 2. DATA LOADING AND CLEANING
 # ==========================================
-df = pd.read_excel("larvae_data_Fully_Graded.xlsx")
+df = pd.read_excel(DATA_FILE)
 survivors = df[df['Survived_30dpf'] == 1].copy()
 survivors = survivors[survivors['Quality_Tier'].isin(['High (8-10)', 'Mid (4-7)', 'Middle (4-7)'])]
 survivors['Quality_Tier'] = survivors['Quality_Tier'].replace({'Middle (4-7)': 'Mid (4-7)'})

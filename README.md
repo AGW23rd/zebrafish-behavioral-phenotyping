@@ -50,6 +50,13 @@ pip install -r requirements.txt
 
 > **Note:** For real-time tracking, you also need a YOLO model file (e.g., `yolov8n.pt` or a custom-trained `.pt` file). These are not included in this repository due to file size.
 
+## Data
+
+The experimental data files (e.g., `larvae_data_Fully_Graded.xlsx`, locomotion CSVs) are **not included** in this repository as they contain raw research data. To reproduce the figures and analyses:
+
+1. **Run the pipeline** yourself: `yolo_tracker_v2.py` → `score_larvae1.py` → `analyze_wells.py`
+2. **Contact the authors** to request the dataset for review purposes
+
 ## Usage
 
 ### 1. Real-Time Tracking
