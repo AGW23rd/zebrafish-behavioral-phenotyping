@@ -1,0 +1,22 @@
+:root {
+  --paper: #f8faf7;
+  --line: #e4eae4;
+  --coral: #cf795d;
+  --display: Georgia, 'Palatino Linotype', serif;
+  --sans: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --mono: 'Cascadia Mono', Consolas, monospace;
+  color: #4e5d54;
+  background: var(--paper);
+  font-family: var(--sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+body { min-width: 340px; min-height: 100vh; margin: 0; }
+button,input { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible,input:focus-visible,label:focus-within { outline: 2px solid #75a386; outline-offset: 2px; }
+::selection { color: #183a31; background: #cfe3d2; }
