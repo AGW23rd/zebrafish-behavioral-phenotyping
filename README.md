@@ -16,14 +16,7 @@ This repository contains the complete pipeline for:
 3. **Survival prediction** — larvae health scores strongly predict 30-day survival outcomes (Cox PH hazard ratio = 407× for low-score vs. high-score, p < 0.005)
 4. **Tracker benchmarking** across 8 synthetic motion types (linear, random walk, Lévy flight, Brownian bridge, correlated random walk, Perlin noise, spiral, curve)
 
-## Key Results
 
-| Metric | Value |
-|---|---|
-| Low-Score Hazard Ratio (30 dpf) | **407×** (p < 0.005) |
-| Mid-Score Hazard Ratio (30 dpf) | **6.09×** (p < 0.005) |
-| Cox Model Concordance | 0.80 – 0.95 |
-| Sample Size | 277 larvae across 3 trials |
 
 ## Repository Structure
 
@@ -33,7 +26,6 @@ This repository contains the complete pipeline for:
 ├── benchmark_tracker.py      # Tracker benchmarking framework (8 motion types)
 ├── metric_evaluator.py       # MOT metrics (MOTA, IDF1, HOTA)
 ├── analyze_wells.py          # Per-well locomotion summary extraction
-├── pub_figures.py            # Publication-ready figure generation (600 DPI)
 ├── survival_analysis.py      # Kaplan-Meier curves + Cox PH models
 ├── spatial_density.py        # Spatial density maps & thigmotaxis visualization
 ├── requirements.txt          # Python dependencies
