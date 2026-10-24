@@ -13,7 +13,7 @@ This repository contains the complete pipeline for:
 
 1. **Real-time multi-object tracking** of zebrafish larvae in multi-well plates using YOLO (v8/v11/v12) with Unscented Kalman Filter (UKF) and multiple association strategies (SORT, ByteTrack, OC-SORT)
 2. **Automated behavioral phenotyping** via a 7-metric composite scoring system (velocity variance, acceleration, thigmotaxis, burst frequency, asymmetry index, V_max, A_max)
-3. **Survival prediction** — larvae health scores strongly predict 30-day survival outcomes (Cox PH hazard ratio = 407× for low-score vs. high-score, p < 0.005)
+3. **Survival prediction** — larval health scores strongly predict 30-day survival outcomes 
 4. **Tracker benchmarking** across 8 synthetic motion types (linear, random walk, Lévy flight, Brownian bridge, correlated random walk, Perlin noise, spiral, curve)
 
 
